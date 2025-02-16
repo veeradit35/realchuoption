@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Chu Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Chu Feedback</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="keyboard.html">KEYBOARD</a></li>
+                <li><a href="mouse.html">MOUSE</a></li>
+                <li><a href="feedback.html">FEEDBACK</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>ให้ข้อเสนอแนะหรือติชม</h2>
+            <p>กรุณากรอกความคิดเห็นหรือคำติชมของคุณ เพื่อให้เราปรับปรุงการบริการ</p>
+
+            <!-- ฟอร์ม Feedback -->
+            <form action="submit_feedback.php" method="POST">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">ความคิดเห็นหรือคำติชม:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">ส่งความคิดเห็น</button>
+            </form>
+        </section>
+
+        <!-- การตอบกลับจากร้าน -->
+        <section id="response" style="display:none;">
+            <h2>ขอบคุณสำหรับความคิดเห็นของคุณ!</h2>
+            <p>ทางเราได้รับความคิดเห็นของคุณแล้ว และจะตอบกลับในเร็วๆ นี้</p>
+        </section>
+
+        <!-- ตัวอย่างคำแนะนำจากลูกค้า -->
+        <section id="customer-reviews">
+            <h2>คำแนะนำจากลูกค้า</h2>
+            <div class="review">
+                <p><strong>คุณสมชาย</strong> - <em>“สินค้าคุณภาพดีมาก คีย์บอร์ดตอบสนองเร็ว ดีใจที่ได้ซื้อที่ร้านนี้”</em></p>
+            </div>
+            <div class="review">
+                <p><strong>คุณวิลลา</strong> - <em>“บริการดีเยี่ยม และการส่งสินค้ารวดเร็วมาก”</em></p>
+            </div>
+            <div class="review">
+                <p><strong>คุณอรทัย</strong> - <em>“ได้คีย์บอร์ดตามที่ต้องการและใช้งานได้ดีมากเลยค่ะ”</em></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Chu Option | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // เมื่อฟอร์มถูกส่งแล้วจะซ่อนฟอร์มและแสดงข้อความตอบกลับ
+        const form = document.querySelector("form");
+        const responseSection = document.getElementById("response");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // หยุดการส่งฟอร์มเพื่อทดสอบ
+            form.style.display = "none"; // ซ่อนฟอร์ม
+            responseSection.style.display = "block"; // แสดงข้อความตอบกลับ
+        });
+    </script>
+
+</body>
+</html>

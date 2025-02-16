@@ -1,0 +1,127 @@
+/* ---- พื้นฐานการตั้งค่าของเว็บไซต์ ---- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* ---- ส่วนของ Header ---- */
+header {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ---- เมนู Navigation ---- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: #ff4500;
+    color: #fff;
+    box-shadow: 0px 0px 15px rgba(255, 69, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+/* ---- เนื้อหาหลัก ---- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 25px;
+}
+
+/* ---- การออกแบบ Section ---- */
+section {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+    max-width: 850px;
+    margin: 25px 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.4);
+}
+
+/* ---- รูปภาพ ---- */
+section img {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+section img:hover {
+    transform: scale(1.08);
+}
+
+/* ---- ปุ่ม Call-to-Action ---- */
+.cta-button {
+    display: inline-block;
+    background: #ff4500;
+    color: #fff;
+    padding: 14px 22px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.6);
+}
+
+.cta-button:hover {
+    background: #ff6347;
+    box-shadow: 0px 0px 20px rgba(255, 69, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* ---- Footer ---- */
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+    box-shadow: 0 -4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin: 0;
+    opacity: 0.8;
+}
